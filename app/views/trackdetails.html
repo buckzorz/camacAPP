@@ -1,0 +1,75 @@
+<div id="main" class="main-body">
+  <div id="loader"></div>
+  <div class="reference-number">
+      <input class="reference-number-textbox" type="text" id="reference-number" placeholder="Your reference number">
+      <button type="button" id="lookup" class="reference-number-button" onclick="showContent()">GO</button>
+  </div>
+  <div class="main-info" id="main-info">
+          <ul class="progressbar">
+            <li class="active">Order created</li>
+            <li class="active">Materials acquired</li>
+            <li>Job scheduled</li>
+            <li>Wheels are beild built</li>
+            <li>Order completed</li>
+          </ul>
+      <div class="arrowdiv"><span class="downarrow">&#8659;</span></div>
+      <div class="order-details">
+        <div class="order-details-header">
+            <p>Order number: #111111</p>
+        </div>
+        <div class="order-details-lower">
+            <div class="order-details-33">                
+                <table class="table">
+                    <tr class="tr-middle"><td>Client name:</td><td>Tom Deboolan</td></tr>
+                    <tr class="tr-middle"><td>Client phone number:</td><td>+380509673091</td></tr>   
+                    <tr class="tr-middle"><td>Client Email:</td><td>tom.deboolan@gmail.com</td></tr>  
+                    <tr class="tr-middle"><td>Shipping address:</td><td>Missclick ave 15, NY, USA</td></tr>        
+                </table>
+            </div>
+            <div class="order-details-33">
+                <table class="table">
+                    <tr class="tr-middle"><td>Order Date:</td><td>11.11.1111</td></tr>
+                    <tr class="tr-middle"><td>Requested shipping:</td><td>{{orderdetails.delivery}}</td></tr>    
+                    <tr class="tr-middle"><td>Sales channel:</td><td>web</td></tr>    
+                    <tr class="tr-middle"><td>Order Status:</td><td>{{orderdetails.status}}</td></tr>    
+                    <tr class="tr-middle"><td>Mechanic:</td><td>Main</td></tr>    
+                    <tr class="tr-middle"><td>Payment:</td><td>{{orderdetails.payment}}</td></tr>    
+                </table>
+            </div>
+            <div class="order-details-33">
+                <table class="table">
+                    <tr class="tr-right"></tr>
+                    <tr class="tr-right"><td>Subtotal:</td><td>$ 114.36</td></tr>    
+                    <tr class="tr-right"><td>Shipping:</td><td>$ 13.60</td></tr>    
+                    <tr class="tr-right"><td>Tax:</td><td>$ 0.00</td></tr>
+                    <tr class="tr-right"><td>Total:</td><td>$ 127.96</td></tr>     
+                </table>
+                
+            </div>
+        </div> 
+        <div class="order-details-header">
+            <p>Order contents</p>
+        </div>
+        <div class="order-contents">
+            <div class="order-details-table-header">
+                <div class="order-details-table-service">Product/Service</div>
+                <div class="order-details-table-other">Quantity</div>
+                <div class="order-details-table-other">Price</div>
+                <div class="order-details-table-other">Total</div>
+            </div>
+            <div class="order-details-table-cell" ng-repeat="field in invoice">
+                <div class="order-details-table-service-lower">{{field.service}}</div>
+                <div class="order-details-table-other-lower">{{field.quantity}}</div>
+                <div class="order-details-table-other-lower">{{field.price}}</div>
+                <div class="order-details-table-other-lower">{{field.quantity + field.price}}</div>
+            </div>
+            <div class="order-details-table-total">
+                <div class="order-details-table-other-lower-total">$320</div>
+                <div class="order-details-table-other-lower-total">ORDER TOTAL:</div>
+            </div>
+            
+        </div>  
+      </div>
+  </div>
+
+</div>

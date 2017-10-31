@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="carmacApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div ui-view="header"></div>
+    <div id="main" class="main-body">
+    <div ui-view="content"></div>
+    </div>
+    <div ui-view="footer"></div>
+   
+<!--<div id="footer" class="footer"></div>-->
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/services.js"></script>
+<script src="scripts/controllers.js"></script>
+</body>
+</html>

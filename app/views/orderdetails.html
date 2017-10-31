@@ -1,0 +1,262 @@
+<div id="main" class="main-body">
+    <div class="wheels">
+        <div class="wheel-inner">
+            <div class="order-details-header">
+                <p>Rear wheel</p>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">HUB</div>
+                <div class="hub-spec">
+                    <div class="form-fill-text">
+                        <p class="small-text">Pitch circle left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.hub.leftside.pitchleft" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Flange distance left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.hub.leftside.flangedistance" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Ø-Spoke hole:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.hub.spokehole" placeholder="mm">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                <div class="form-fill-text">
+                        <p class="small-text">Pitch circle right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.hub.rightside.pitchright" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Flange distance right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.hub.rightside.flangedistance"  placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Weight:</p>
+                        <input type="text" class="small-input" placeholder="gram">
+                    </div>
+                </div>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">RIM</div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Diameter/ERD:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.rim.erd" placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Inside width:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.rim.insidewidth" placeholder="mm">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Diameter/ERD:</p>
+                        <input type="text" class="small-input" placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Weight:</p>
+                        <input type="text" class="small-input" placeholder="gram">
+                    </div>
+                </div>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">SPOKES</div>
+                                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Number of spokes:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.spokes.spokecount" placeholder="pcs">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Number of intersections left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.spokes.crossesleft" placeholder="pcs">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Nipple:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.spokes.nipple"  placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Number of intersections right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.rearwheel.spokes.crossesright" placeholder="pcs">
+                    </div>
+            </div>  
+            </div>
+            <div class="spoke-length">
+                <div class="spoke-length-side">SPOKE LENGTH LEFT: <b>{{wheelSpec.rearwheel.spokes.spokeLengthLeft}}</b>
+                </div>
+                <div class="spoke-length-side">SPOKE LENGTH RIGHT: <b>{{wheelSpec.rearwheel.spokes.spokeLengthRight}}</b></div>
+            </div>
+            <div class="whell-controls">
+                <div class="whell-controls-button" ng-click="spokeLength('rearwheel')">Calculate spoke length</div>
+                <div class="whell-controls-button">Save</div>
+            </div>
+        </div>
+        <div class="wheel-inner">
+            <div class="order-details-header">
+                <p>Rear wheel</p>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">HUB</div>
+                <div class="hub-spec">
+                    <div class="form-fill-text">
+                        <p class="small-text">Pitch circle left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.hub.leftside.pitchleft" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Flange distance left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.hub.leftside.flangedistance" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Ø-Spoke hole:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.hub.spokehole" placeholder="mm">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                <div class="form-fill-text">
+                        <p class="small-text">Pitch circle right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.hub.rightside.pitchright" placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Flange distance right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.hub.rightside.flangedistance"  placeholder="mm">
+                    </div>
+                    <div class="form-fill-text">
+                        <p class="small-text">Weight:</p>
+                        <input type="text" class="small-input" placeholder="gram">
+                    </div>
+                </div>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">RIM</div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Diameter/ERD:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.rim.erd" placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Inside width:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.rim.insidewidth" placeholder="mm">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Diameter/ERD:</p>
+                        <input type="text" class="small-input" placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Weight:</p>
+                        <input type="text" class="small-input" placeholder="gram">
+                    </div>
+                </div>
+            </div>
+            <div class="whell-inner-tile">
+                <div class="whell-inner-tile-header">SPOKES</div>
+                                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Number of spokes:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.spokes.spokecount" placeholder="pcs">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Number of intersections left:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.spokes.crossesleft" placeholder="pcs">
+                    </div>
+                </div>
+                <div class="hub-spec">
+                    <div class="rim-spec">
+                        <p class="small-text">Nipple:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.spokes.nipple"  placeholder="mm">
+                    </div>
+                    <div class="rim-spec">
+                        <p class="small-text">Number of intersections right:</p>
+                        <input type="text" class="small-input" ng-model="wheelSpec.frontwheel.spokes.crossesright" placeholder="pcs">
+                    </div>
+            </div>  
+            </div>
+            <div class="spoke-length">
+                <div class="spoke-length-side">SPOKE LENGTH LEFT: <b>{{wheelSpec.frontwheel.spokes.spokeLengthLeft}}</b>
+                </div>
+                <div class="spoke-length-side">SPOKE LENGTH RIGHT: <b>{{wheelSpec.frontwheel.spokes.spokeLengthLeft}}</b></div>
+            </div>
+            <div class="whell-controls">
+                <div class="whell-controls-button" ng-click="spokeLength('frontwheel')">Calculate spoke length</div>
+                <div class="whell-controls-button">Save</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="order-controls">
+        <div id="ordercreated" class="order-details-change" ng-click="completedStep('ordercreated')"><p class="controls-button">Order created</p></div>
+        <div id="materialsacquired" ng-click="completedStep('materialsacquired')" class="order-details-change"><p class="controls-button">Materials acquired</p></div>
+        <div id="jobscheduled" ng-click="completedStep('jobscheduled')" class="order-details-change"><p class="controls-button">Job scheduled</p></div>
+        <div id="wheelsarebeingbuilt" ng-click="completedStep('wheelsarebeingbuilt')" class="order-details-change"><p class="controls-button">Wheels are beild built</p></div>
+        <div id="ordercompleted" ng-click="completedStep('ordercompleted')" class="order-details-change"><p class="controls-button">Order completed</p></div>
+    </div>
+     <div class="order-details">
+        <div class="order-details-header">
+            <p>Order number: #111111</p>
+            <button class="save-field-button-header" ng-click="savedetails()">SAVE</button>
+        </div>
+        <div class="order-details-lower" >
+            <div class="order-details-33">                
+                <table class="table">
+                    <tr class="tr-middle"><td>Client name:</td><td><edit-in-place id="eip" value="orderinfo.clientname"></edit-in-place></td></tr>
+                    <tr class="tr-middle"><td>Client phone number:</td><td ><edit-in-place id="eip" value="orderinfo.clientnumber"></edit-in-place></td></tr>   
+                    <tr class="tr-middle"><td>Client Email:</td><td><edit-in-place id="eip" value="orderinfo.clientemail"></edit-in-place></td></tr>  
+                    <tr class="tr-middle"><td>Shipping address:</td><td><edit-in-place id="eip" value="orderinfo.clientaddress"></edit-in-place></td></tr>
+                </table>
+            </div>
+            <div class="order-details-33">
+                <table class="table">
+                    <tr class="tr-middle"><td>Order Date:</td><td>11.11.1111</td></tr>
+                    <tr class="tr-middle"><td>Requested shipping:</td><td><edit-in-place id="eip" value="orderinfo.shipping"></edit-in-place></td></tr>    
+                    <tr class="tr-middle"><td>Sales channel:</td><td>web</td></tr>    
+                    <tr class="tr-middle"><td>Order Status:</td><td>Completed</td></tr>    
+                    <tr class="tr-middle"><td>Mechanic:</td><td><edit-in-place  id="eip" value="orderinfo.mechanic"></edit-in-place></td></tr>    
+                    <tr class="tr-middle"><td>Payment:</td><td><edit-in-place id="eip" value="orderinfo.payment"></edit-in-place></td></tr>    
+                </table>
+            </div>
+            <div class="order-details-33">
+                <table class="table">
+                    <tr class="tr-right"></tr>
+                    <tr class="tr-right"><td>Subtotal:</td><td>$ {{orderTotal}}</td></tr> 
+                    <tr class="tr-right"><td>Shipping:</td><td>$ 13.60</td></tr>    
+                    <tr class="tr-right"><td>Tax:</td><td>$ 0.00</td></tr>
+                    <tr class="tr-right"><td>Total:</td><td>$ 127.96</td></tr>     
+                </table>
+                
+            </div>
+        </div> 
+        <div class="order-details-header">
+            <p>Order contents</p>
+        </div>
+        <div class="order-contents">
+            <div class="order-details-table-header">
+                <div class="order-details-table-service">Product/Service</div>
+                <div class="order-details-table-other">Quantity</div>
+                <div class="order-details-table-other">Price</div>
+                <div class="order-details-table-other">Total</div>
+            </div>
+            <div class="order-details-table-cell" ng-repeat="object in invoice track by $index">
+                <div class="order-details-table-service-lower">{{object.service}}</div>
+                <div class="order-details-table-other-lower">{{object.quantity}}</div>
+                <div class="order-details-table-other-lower">${{object.price}}</div>
+                <div class="order-details-table-other-lower">${{object.quantity * object.price}}</div>
+            </div>
+            <div class="order-details-table-cell-input">
+                <div class="order-details-table-service-lower"><input size="80" type="text" class="add-field-input" ng-model="invoiceField.service"></div>
+                <div class="order-details-table-other-lower"><input class="add-field-input" type="text" ng-model="invoiceField.quantity"></div>
+                <div class="order-details-table-other-lower"><input class="add-field-input" type="text" ng-model="invoiceField.price"></div>
+                <div class="order-details-table-other-lower"><button class="save-field-button" ng-click="save(invoiceField.service, invoiceField.quantity, invoiceField.price); total()">SAVE</button></div>
+            </div>
+            <div class="order-details-table-total">
+                <div class="order-details-table-other-lower-total">${{orderTotal}}</div>
+                <div class="order-details-table-other-lower-total">ORDER TOTAL:</div>
+            </div>
+            <div class="order-details-table-total">
+                <div class="order-now">Update invoice</div>
+            </div>
+        </div>  
+      </div>
+</div>
+<pre>{{wheelSpec | json}}</pre>
+<pre>{{orderinfo | json}}</pre>

@@ -1,0 +1,23 @@
+{
+  "name": "camacapp",
+  "version": "1.0.0",
+  "description": "CRM system",
+  "main": "index.js",
+  "dependencies": {
+    "ng-resource": "^1.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buckzorz/camacAPP.git"
+  },
+  "author": "Alexey Aisulov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buckzorz/camacAPP/issues"
+  },
+  "homepage": "https://github.com/buckzorz/camacAPP#readme"
+}

@@ -1,0 +1,17 @@
+
+<div id="main" class="main-body">
+    <div class="create-order-form">
+        <div class="create-order-form-field">
+            <div class="form-header">Login:</div>
+            <div>
+                <input type="text" ng-model="loginData.username" class="form-input-field">
+            </div>
+            <div class="form-header">Password:</div>
+            <div>
+                <input type="text" ng-model="loginData.password" class="form-input-field">
+            </div>
+            <div class="order-now" ng-click="doLogin()">Login</div>
+            <pre>order = {{loginData | json}}</pre>
+        </div>    
+    </div>   
+</div>

@@ -1,0 +1,67 @@
+<div id="main" class="main-body">
+    <div class="allorders">
+        All orders (7)
+    </div>
+    <div>
+    <div class="order-filters">
+        <div class="filters-header">
+            <div class="filter-name">ID <span>&#8693;</span></div>
+            <div class="filter-name">Service  <span>&#8693;</span></div>
+            <div class="filter-name">Delivery  <span>&#8693;</span></div>
+            <div class="filter-name">Payment  <span>&#8693;</span></div>
+            <div class="filter-name">Client <span>&#8693;</span></div>
+            <div class="filter-name">Status  <span>&#8693;</span></div>
+            <div class="filter-name">Reference  <span>&#8693;</span></div>
+        </div>
+        <div class="filters-body">
+            <div class="filter-name"><input type="text" size="1" name="ID" placeholder="ID"></div>
+            <div class="filter-name">
+                <select class="filter-select" ng-model="filter.service">
+                  <option value="volvo">Service</option>
+                  <option value="saab">Build</option>
+                </select>
+            </div>
+            <div class="filter-name">
+                <select class="filter-select" ng-model="filter.delivery">
+                  <option value="local">Local Pick Up</option>
+                  <option value="np">NovaPoshta</option>
+                  <option value="it">InTime</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="filter-name">
+                <select class="filter-select" ng-model="filter.payment">
+                  <option value="local">CC</option>
+                  <option value="np">Cash</option>
+                </select>
+            </div>
+            <div class="filter-name"><input type="text"  name="ID" ng-model="filter.client.name" placeholder="Client name"></div>
+            <div class="filter-name">
+                <select class="filter-select" ng-model="filter.progress">
+                  <option value="order created">Order created</option>
+                  <option value="materials acquired">Materials acquired</option>
+                  <option value="job scheduled">Job scheduled</option>
+                  <option value="In progress">Wheels are beild built</option>
+                  <option value="Completed">Order completed</option>    
+                </select>
+            </div>
+            <div class="filter-name"><input type="text" ng-model="filter.reference" name="ID" placeholder="ID"></div>
+        </div>
+    </div>
+    <div>
+        <div class="orders" ng-repeat="order in orders" ui-sref="app.orderdetail({id: order._id})">
+            <div>
+                <div class="order-cell">{{$index + 1}}</div>
+                <div class="order-cell">{{order.service}}</div>
+                <div class="order-cell">{{order.delivery}}</div>
+                <div class="order-cell">{{order.payment}}</div>
+                <div class="order-cell">Tom Debbolan</div>
+                <div class="order-cell">{{order.status}}</div>
+                <div class="order-cell">{{order.reference}}</div>
+            </div>
+        </div>
+    </div>
+        <pre>{{filter | json}}</pre>
+        
+    </div>
+</div>

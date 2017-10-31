@@ -1,0 +1,29 @@
+<div id="main" class="main-body">
+    <div class="create-order-form">
+        <form novalidate>
+        <div class="create-order-form-field">
+            <div class="form-header">Name:</div>
+            <div>
+                <input type="text" class="form-input-field" ng-model="order.name">
+            </div>
+            <div class="form-header">Email:</div>
+            <div>
+                <input type="text" class="form-input-field" ng-model="order.email">
+            </div>
+            <div class="form-header">Phone number:</div>
+            <div>
+                <input type="text" class="form-input-field" ng-model="order.phone">
+            </div>
+            <div class="form-header">Service required:</div>
+            <div>
+                <select  ng-model="order.service" class="form-input-field">
+                    <option value="build">Build</option>
+                    <option value="maintence">Maintence</option>
+                </select>
+            </div>
+            <div class="order-now" ng-click="createorder()">ORDER NOW</div>
+        </div> 
+        </form>
+        <pre>order = {{order | json}}</pre>
+    </div>   
+</div>
